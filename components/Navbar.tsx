@@ -42,7 +42,7 @@ export default function Navbar() {
                         <div
                             onClick={() => setIsProfileDropdownOpen(!isProfileDropdownOpen)}
                         >
-                            <img src={`https://15065ae3c21e0bff07eaf80b713a6ef0.ipfscdn.io/ipfs/bafybeibto2zzqddszjj6ommuu5sr6vap74bh7zvlo4ncvlvqtng6ai4yzu/giprg.png`} alt="avatar" className={styles.avatar}/>
+                            <img src={`https://15065ae3c21e0bff07eaf80b713a6ef0.ipfscdn.io/ipfs/bafybeifq4qe2zzdfoqkpur3lqzeainuw7yg3dkqgn7l5dydn7cgcc6cnmm/46u4u.png`} alt="avatar" className={styles.avatar}/>
                         </div>
                     )}
                 </div>

@@ -330,7 +330,7 @@ import {
 
 
               
-            </div>
+            
             <h2>Total Staked NFTs</h2>
         <div>{totalStakedNFTs.toLocaleString()}/{totalNFTs.toLocaleString()}</div>
         <div className={styles["progress-bar-container"]}>

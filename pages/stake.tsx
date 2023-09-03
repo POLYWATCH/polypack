@@ -7,6 +7,7 @@ import {
     ThirdwebNftMedia,
     useAddress,
     useContract,
+    useContractEvents,
     useContractRead,
     useContractWrite,
     useOwnedNFTs,

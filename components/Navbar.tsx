@@ -30,6 +30,9 @@ export default function Navbar() {
                     <Link href="/stake">
                         <p>Stake</p>
                     </Link>
+                    <Link href="https://polywatchmobile.vercel.app">
+                    <p>MOBILE</p>
+                    </Link>
                 </div>
                 <div>
                     {!address ? (

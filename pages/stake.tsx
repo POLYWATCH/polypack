@@ -334,7 +334,7 @@ import {
         <div className={styles["progress-bar-container"]}>
           <div className={styles["progress-bar"]} style={{ width: `${formattedPercentage}` }} />
         </div>
-            
+        <div>{formattedPercentage}</div>
             <div style={{ height: "150px" }}></div>
   
             

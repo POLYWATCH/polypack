@@ -111,32 +111,7 @@ import {
       setTotalRewardsClaimed(rewardsClaimedEvents.length);
     }
   }, [rewardsClaimedEvents]); 
-    
-
-  const { data: stakedEvents } = useContractEvents(contract, "TokensStaked");
-  const [totalStakedNFTs, setTotalStakedNFTs] = useState(0);
-  const { data: rewardsClaimedEvents } = useContractEvents(contract, "RewardsClaimed");
-  const [totalRewardsClaimed, setTotalRewardsClaimed] = useState(0);
-  const totalNFTs = 5700; // Numero totale di NFT nella collezione
-  // Numero aggiuntivo di NFT staked
- const additionalStakedNFTs = 248; 
-  useEffect(() => {
-    if (stakedEvents) {
-      setTotalStakedNFTs(stakedEvents.length + additionalStakedNFTs); // Aggiungiamo 140 NFT staked in più
-    }
-  }, [stakedEvents]);
-
-  const percentageStaked = (totalStakedNFTs / totalNFTs) * 100;
-  const formattedPercentage = `${percentageStaked.toFixed(2)}%`;
-
-  useEffect(() => {
-    if (rewardsClaimedEvents) {
-      setTotalRewardsClaimed(rewardsClaimedEvents.length);
-    }
-  }, [rewardsClaimedEvents]);
-
-    
-    
+      
     
     
     

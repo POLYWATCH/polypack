@@ -88,7 +88,29 @@ import {
     getQuantityOwned();
     
     
-    
+   
+
+  const { data: stakedEvents } = useContractEvents(contract, "TokensStaked");
+  const [totalStakedNFTs, setTotalStakedNFTs] = useState(0);
+  const { data: rewardsClaimedEvents } = useContractEvents(contract, "RewardsClaimed");
+  const [totalRewardsClaimed, setTotalRewardsClaimed] = useState(0);
+  const totalNFTs = 5700; // Numero totale di NFT nella collezione
+  // Numero aggiuntivo di NFT staked
+ const additionalStakedNFTs = 248; 
+  useEffect(() => {
+    if (stakedEvents) {
+      setTotalStakedNFTs(stakedEvents.length + additionalStakedNFTs); // Aggiungiamo 140 NFT staked in più
+    }
+  }, [stakedEvents]);
+
+  const percentageStaked = (totalStakedNFTs / totalNFTs) * 100;
+  const formattedPercentage = `${percentageStaked.toFixed(2)}%`;
+
+  useEffect(() => {
+    if (rewardsClaimedEvents) {
+      setTotalRewardsClaimed(rewardsClaimedEvents.length);
+    }
+  }, [rewardsClaimedEvents]); 
     
 
   const { data: stakedEvents } = useContractEvents(contract, "TokensStaked");
@@ -329,12 +351,23 @@ import {
   
   
             </div>
+<<<<<<< HEAD
+=======
+
+
+              
+            
+>>>>>>> 1c4feef49850db42217ba3ca15581930770af0a2
             <h2>Total Staked NFTs</h2>
         <div>{totalStakedNFTs.toLocaleString()}/{totalNFTs.toLocaleString()}</div>
         <div className={styles["progress-bar-container"]}>
           <div className={styles["progress-bar"]} style={{ width: `${formattedPercentage}` }} />
         </div>
+<<<<<<< HEAD
         <div>{formattedPercentage}</div>
+=======
+            <div>{formattedPercentage}</div>
+>>>>>>> 1c4feef49850db42217ba3ca15581930770af0a2
             <div style={{ height: "150px" }}></div>
   
             
